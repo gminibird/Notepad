@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        android:gravity="center_vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_marginLeft="18dp"
+            android:text="Notepad"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+
+        <LinearLayout
+            android:id="@+id/select_all"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:visibility="invisible">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorWhite"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:text="全选"
+                android:layout_marginRight="-5dp"
+                />
+            <CheckBox
+                android:id="@+id/check_all"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:theme="@style/WhiteTheme"/>
+
+        </LinearLayout>
+
+
+
+
+    </RelativeLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/floating_button"
+        android:src="@mipmap/ic_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="30dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/main_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            />
+
+        <LinearLayout
+            android:id="@+id/delete_selected"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:layout_gravity="bottom"
+            android:gravity="center"
+            android:visibility="gone">
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:src="@drawable/ic_delete"
+                android:layout_gravity="center"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+
+
+
+</FrameLayout>
